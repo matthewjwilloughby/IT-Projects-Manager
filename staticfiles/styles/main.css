@@ -1,0 +1,189 @@
+
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif, tahoma;
+    font-weight: 600;
+    background-color: rgb(60, 92, 101);
+    margin: 0;
+    color: aliceblue;
+}
+
+a:link {
+    color:rgb(62, 62, 62);
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+a:visited {
+    color:rgb(79, 79, 79);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.loginForm{
+    margin: auto;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.navBar{
+    display: grid;
+    grid-template-columns: auto 125px 125px 125px;
+    width: 100%;
+    color: rgb(177, 177, 177);
+    text-align:left;
+    background-color: rgb(47, 47, 47);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.navigationButtons{
+    background-color: #585a65; 
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    width:100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.submitButton{
+    background-color: #585a65; 
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    width:50px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.pageHeader{
+    color: rgb(204, 204, 204);
+    padding-top: 10px;
+    gap: 2px;
+    overflow: hidden;
+    margin: auto;
+    width: 90%;
+    font-weight: 700;
+    overflow: hidden;
+
+}
+
+.projectsPageAddProject{
+    display: grid;
+    grid-template-columns: 65% 5% 15% auto;
+    color: rgb(71, 71, 71);
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap: 2px;
+    overflow: hidden;
+    margin: auto;
+    width: 90%;
+    min-height: 50px;
+}
+
+.projectsPageHeader{
+    display: grid;
+    grid-template-columns: 65% 5% 15% 7.5% 7.5%;
+    color: rgb(211, 211, 211);
+    text-align: center;
+    padding: 1px;
+    gap: 2px;
+    overflow: hidden;
+    margin: auto;
+    width: 90%;
+    font-weight: 900;
+    text-overflow: hidden;
+}
+
+.projectsPageGrid{
+    display: grid;
+    grid-template-columns: 65% 5% 15% 7.5% 7.5%;
+    color: rgb(71, 71, 71);
+    text-align: center;
+    padding: 1px;
+    gap: 2px;
+    overflow: hidden;
+    margin: auto;
+    width: 90%;
+}
+
+.priorityOneAlignLeft{
+    background-color: rgb(248, 152, 138);
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+}
+
+.priorityOne{
+    background-color: rgb(248, 152, 138);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.priorityTwoAlignLeft{
+    background-color: rgb(249, 250, 213);
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+}
+
+.priorityTwo{
+    background-color: rgb(249, 250, 213);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.priorityThreeAlignLeft{
+    background-color: rgb(138, 248, 193);
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+}
+
+.priorityThree{
+    background-color: rgb(138, 248, 193);
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+.projectsHeader{
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.projectsHeaderAlignLeft{
+    text-align: left;
+    overflow: hidden;
+
+}
+
+.projectTitleInput{
+    width: 97%;
+}
+
+.projectPriorityInput{
+    width: 70%;
+    text-align: center;
+}
+
+.projectNotesInput{
+    width: 90%;
+}

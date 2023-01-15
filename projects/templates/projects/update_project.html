@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load add_classes%}
+
+    <div class="pageHeader">
+        <h1 >Edit Project</h1>
+    </div>
+
+    <!-- Header to table spacing -->
+    <div class="projectsPageAddProject">
+        <div class="projectsPageProjectColumn"></div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+    </div>
+
+    <!-- Column Headers -->
+    <div class="projectsPageHeader">
+        <div class="projectsPageProjectColumn">Project</div>
+        <div Class="projectsPageCells">priority</div>
+        <div Class="projectsPageCells">Notes</div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+    </div>
+
+    <!-- Table of Projects -->
+    {% for project in projects %}
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        <div class="projectsPageGrid">
+
+            <!-- Selected project to update  -->
+            {% if project.title == selectedProject.title %}
+                {% csrf_token %}
+
+                <div class="{{project.priority|projectRowTitlePriorityClass}}">{{form.title}}</div>
+                <div Class="{{project.priority|projectRowPriorityClass}}">{{form.priority}}</div>
+                <div Class="{{project.priority|projectRowPriorityClass}}">{{form.notes}}</div>
+                <div Class="{{project.priority|projectRowPriorityClass}}"><input type="submit" value="Update"></div>
+                <div Class="{{project.priority|projectRowPriorityClass}}"></div>
+            
+            <!-- Projects that are not selected  -->
+            {% else %}
+
+                <div class="{{project.priority|projectRowTitlePriorityClass}}"><a href="{% url 'update-project' project.id %}">{{project.title}}</a></div>
+                <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'update-project' project.id %}">{{project.priority}}</a></div>
+                <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'update-project' project.id %}">{{project.notes}}</a></div>
+                <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'update-project' project.id %}">Update</a></div>
+                <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'archive-project' project.id %}">Archive</a></div>
+
+            {% endif %}
+        </div>
+    </form>
+    {% endfor %}
+
+{% endblock %}

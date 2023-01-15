@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load add_classes %}
+
+    <!-- Header -->
+    <div class="pageHeader">
+        <h1 >Archive</h1>
+    </div>
+
+    <!-- Header to table spacing -->
+    <div class="projectsPageAddProject">
+        <div class="projectsPageProjectColumn"></div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+    </div>
+
+    <!-- Column Headers -->
+    <div class="projectsPageHeader">
+        <div class="projectsPageProjectColumn">Project</div>
+        <div Class="projectsPageCells">priority</div>
+        <div Class="projectsPageCells">Notes</div>
+        <div Class="projectsPageCells"></div>
+        <div Class="projectsPageCells"></div>
+    </div>
+
+    <!-- Table of Projects -->
+    {% for archivedProjects in archivedProjects %}
+
+        <div class="projectsPageGrid">
+            <div class="{{archivedProjects.priority|projectRowTitlePriorityClass}}">{{archivedProjects.project}}</div>
+            <div Class="{{archivedProjects.priority|projectRowPriorityClass}}">{{archivedProjects.priority}}</div>
+            <div Class="{{archivedProjects.priority|projectRowPriorityClass}}">{{archivedProjects.notes}}</div>
+            <div Class="{{archivedProjects.priority|projectRowPriorityClass}}"></div>
+            <div Class="{{archivedProjects.priority|projectRowPriorityClass}}"><a href="{% url 'restore-project' archivedProjects.id %}">Restore</a></div>
+        </div>
+
+    {% endfor %}
+
+{% endblock content %}

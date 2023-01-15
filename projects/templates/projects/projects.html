@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load add_classes %}
+        
+    <!-- Header -->
+    <div class="pageHeader">
+        <h1 >Projects</h1>
+    </div>
+
+    <!-- Add new projects -->
+    <form action="" method="POST" enctype="multipart/form-data" autocomplete=“off”>
+        {% csrf_token %}
+        <div class="projectsPageAddProject">
+            <div class="projectsPageProjectColumn">{{form.title}}</div>
+            <div Class="projectsPageCells">{{form.priority}}</div>
+            <div Class="projectsPageCells">{{form.notes}}</div>
+            <div Class="projectsPageCells"><input class="submitButton" type="submit" value="Add"/></div>
+        </div>
+    </form>
+
+    <!-- Column Headers -->
+    <div class="projectsPageHeader">
+        <div class="projectsHeaderAlignLeft">Project</div>
+        <div Class="projectsHeader">priority</div>
+        <div Class="projectsHeader">Notes</div>
+        <div Class="projectsHeader"></div>
+        <div Class="projectsHeader"></div>
+    </div>
+
+    <!-- Table of Projects -->
+    {% for project in projects %}
+
+        <div class="projectsPageGrid">
+
+        <div class="{{project.priority|projectRowTitlePriorityClass}}"><a href="{% url 'update-project' project.id %}">{{project.title}}</a></div>
+        <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'update-project' project.id %}">{{project.priority}}</a></div>
+        <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'update-project' project.id %}">{{project.notes}}</a></div>
+        <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'update-project' project.id %}">Update</a></div>
+        <div Class="{{project.priority|projectRowPriorityClass}}"><a href="{% url 'archive-project' project.id %}">Archive</a></div>
+
+        </div>
+        
+    {% endfor %}
+
+{% endblock content %}

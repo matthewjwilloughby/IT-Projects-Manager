@@ -1,0 +1,27 @@
+{% load static %}
+
+<!-- Header Section -->
+      <nav class="navBar">
+          <div>
+            
+          </div>
+
+          <form action="{% url 'projects' %}">
+            <input class="navigationButtons" type="submit" value="Projects" />
+          </form>
+
+
+          <form action="{% url 'archived-projects' %}">
+            <input class="navigationButtons" type="submit" value="Archive" />
+          </form>
+
+          {% if request.user.is_authenticated %}
+              <form action="{% url 'logout' %}">
+                <input class="navigationButtons" type="submit" value="Logout" />
+              </form>
+          {% else %}
+              <form action="{% url 'login' %}">
+                <input class="navigationButtons" type="submit" value="Login" />
+              </form>
+          {% endif %}
+      </nav>
