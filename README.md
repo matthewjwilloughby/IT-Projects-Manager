@@ -1,12 +1,13 @@
-Overview
+Overview:
 This web app helps you manage and track your projects by providing a user-friendly interface to create, update, and delete projects, as well as assign tasks, track their progress, and archive them when they are completed.
-Features
+
+Features:
     • Create, update, and delete projects
     • Assign tasks and track progress
     • View and filter project tasks by priority 
     • Collaborate with team members by assigning tasks and leaving notes
 
-Installation
+Installation:
 To get started, you will need to install the following dependencies:
     • Python 3.x
     • Django 3.x
